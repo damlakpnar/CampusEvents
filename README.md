@@ -23,10 +23,15 @@ Admin: Yeni kullanıcı tanımlar, etkinliklere organizer ataması yapar/değiş
 
 Kullanılan Teknolojiler
 PHP
+
 HTML / CSS
+
 Apache
+
 MySQL
+
 phpMyAdmin
+
 AMPS
 
 Projenin veritabanı yapısı `campus_events.sql` dosyasında yer almaktadır.
