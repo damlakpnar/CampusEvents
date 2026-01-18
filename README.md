@@ -1,4 +1,4 @@
-Campus Events – Web Tabanlı Etkinlik Yönetim Sistemi
+# Campus Events – Web Tabanlı Etkinlik Yönetim Sistemi
 
 Bu repo, AMPS (Apache–MySQL–PHP–phpMyAdmin) ortamında çalışan Campus Events web tabanlı etkinlik yönetim sistemi projesini içermektedir.
 Proje, kampüs içi etkinliklerin rol tabanlı olarak yönetilmesini amaçlamaktadır.
