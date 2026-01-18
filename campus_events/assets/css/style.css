@@ -1,0 +1,361 @@
+/* ============== THEME / RESET ============== */
+:root{
+  --bg1:#f3f1ff;
+  --bg2:#efeaff;
+
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+
+  --primary:#7c3aed;     /* mor */
+  --primary2:#a78bfa;    /* açık mor */
+  --border:#e6e1ff;
+
+  --success:#16a34a;
+  --danger:#dc2626;
+  --warning:#f59e0b;
+
+  --shadow: 0 20px 50px rgba(17, 24, 39, 0.12);
+  --shadow-sm: 0 10px 25px rgba(17, 24, 39, 0.10);
+
+  --radius:18px;
+  --radius-sm:14px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+
+/* Links */
+a{ color:inherit; text-decoration:none; }
+
+/* ============== TOP BAR (Campus Events) ============== */
+.topbar{
+  background: #fff;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.10);
+}
+.topbar__inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.brand{
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: .2px;
+  color: var(--primary);
+}
+.topbar__right{
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ============== PAGE LAYOUT (Sidebar + Content) ============== */
+.page{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 26px 16px 40px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap: 26px;
+  align-items:start;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+/* ============== CARDS ============== */
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(124, 58, 237, 0.08);
+}
+.card--soft{
+  box-shadow: var(--shadow-sm);
+}
+
+.card__body{
+  padding: 22px 22px;
+}
+
+.card__title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 10px;
+}
+.card__subtitle{
+  margin:0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ============== SIDEBAR MENU ============== */
+.sidebar .card__title{
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.sidebar .hello{
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.menu a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  background: rgba(167, 139, 250, 0.10);
+  font-weight: 700;
+}
+.menu a:hover{
+  background: rgba(167, 139, 250, 0.18);
+}
+.menu a.active{
+  background: rgba(124, 58, 237, 0.14);
+  border-color: rgba(124, 58, 237, 0.30);
+}
+.menu a.logout{
+  background: rgba(220, 38, 38, 0.08);
+  border-color: rgba(220, 38, 38, 0.22);
+  color: var(--danger);
+}
+
+/* ============== FORMS ============== */
+.label{
+  display:block;
+  font-weight: 700;
+  margin: 14px 0 8px;
+}
+.input, select, textarea{
+  width:100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  outline:none;
+  background:#fff;
+  font-size: 15px;
+}
+.input:focus, select:focus, textarea:focus{
+  border-color: rgba(124, 58, 237, 0.55);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.10);
+}
+.input.is-invalid{
+  border-color: rgba(220, 38, 38, 0.65);
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.08);
+}
+
+/* ============== BUTTONS ============== */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor:pointer;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.btn-primary{
+  color:#fff;
+  background: linear-gradient(90deg, var(--primary2), var(--primary));
+  box-shadow: 0 14px 25px rgba(124, 58, 237, 0.28);
+}
+.btn-primary:hover{ filter: brightness(0.98); }
+.btn-wide{ width: 260px; max-width: 100%; }
+
+.actions-center{
+  display:flex;
+  justify-content:center;
+  margin-top: 18px;
+}
+
+/* ============== ALERTS ============== */
+.alert{
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-weight: 700;
+  margin: 14px 0 0;
+  border: 1px solid;
+}
+.alert-success{
+  color: #0f5132;
+  background: rgba(22, 163, 74, 0.10);
+  border-color: rgba(22, 163, 74, 0.25);
+}
+.alert-error{
+  color: #7f1d1d;
+  background: rgba(220, 38, 38, 0.10);
+  border-color: rgba(220, 38, 38, 0.25);
+}
+
+/* ============== TABLE (yaklaşan etkinlikler) ============== */
+.table-wrap{
+  overflow:auto;
+  border-radius: 14px;
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+table{
+  width:100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  background:#fff;
+}
+thead th{
+  text-align:left;
+  padding: 12px 14px;
+  background: rgba(167, 139, 250, 0.12);
+  color: #111827;
+  font-weight: 900;
+}
+tbody td{
+  padding: 12px 14px;
+  border-top: 1px solid rgba(124, 58, 237, 0.10);
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  background: rgba(167, 139, 250, 0.18);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  color: var(--primary);
+}
+
+/* ============== FOOTER ============== */
+.footer{
+  text-align:center;
+  color: var(--muted);
+  padding: 26px 16px;
+}
+/* ============== LOGIN PAGE ============== */
+.login-bg{
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+
+.login-page{
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding: 32px 16px;
+}
+
+.login-grid{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.login-grid > .card{
+  width: 100%;
+}
+
+/* Mobil */
+@media (max-width: 900px){
+  .login-grid{
+    grid-template-columns: 1fr;
+  }
+}
+/* ============== LANDING GRID ============== */
+.landing-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.landing-grid > .card:last-child{
+  grid-column: 1 / -1; /* "Nasıl Çalışır" kartı altta full */
+}
+
+@media (max-width: 980px){
+  .landing-grid{ grid-template-columns: 1fr; }
+  .landing-grid > .card:last-child{ grid-column:auto; }
+} .layout__inner{ display:flex !important; gap:24px !important; align-items:flex-start !important; }
+.sidebar{ flex:0 0 320px !important; width:320px !important; }
+.content{ flex:1 1 auto !important; min-width:0 !important; }
+
+@media (max-width: 900px){
+  .layout__inner{ flex-direction:column !important; }
+  .sidebar{ width:100% !important; flex:0 0 auto !important; }
+}
+/* =========================
+   STUDENT PANEL ÖLÇÜLERİYLE AYNI LAYOUT
+   ========================= */
+
+/* Sayfanın genel iç genişliği ve ortalama */
+.layout{
+  width: min(1180px, calc(100% - 48px));
+  margin: 24px auto;
+}
+
+/* Sidebar + content aralığı */
+.layout__inner{
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+}
+
+/* Student’taki gibi sidebar kart ölçüsü */
+.sidebar{
+  flex: 0 0 320px;
+  width:320px;
+}
+
+/* Content alanı */
+.content{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Kartların padding/hissi student gibi */
+.card__body{
+  padding: 22px 22px;
+}
+
+/* Tablo ve kart araları */
+.card{ margin-bottom: 18px; }
+.table-wrap{ margin-top: 14px; }
+
+/* Mobilde alt alta ve geniş */
+@media (max-width: 900px){
+  .layout{
+    width: calc(100% - 24px);
+    margin: 16px auto;
+  }
+  .layout__inner{ flex-direction:column; }
+  .sidebar{ width:100%; flex: 0 0 auto; }
+}
+
