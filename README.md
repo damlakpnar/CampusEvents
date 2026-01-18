@@ -26,7 +26,8 @@ PHP
 HTML / CSS
 Apache
 MySQL
-
 phpMyAdmin
-
 AMPS
+
+Projenin veritabanı yapısı `campus_events.sql` dosyasında yer almaktadır.
+Uygulamayı çalıştırmadan önce bu dosya phpMyAdmin üzerinden MySQL veritabanına import edilmelidir.
