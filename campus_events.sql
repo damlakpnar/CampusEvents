@@ -1,8 +1,3 @@
-/*Kampüs Etkinlik Yönetim Sistemib SQL DOSYASI
-    230601035-Damla AKPINAR
-    230601040-Ülkü Bensu İNCE
-    230601050-Havin Ezgi GÜNEŞ
-*/
 
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
